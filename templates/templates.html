@@ -1,0 +1,30 @@
+<ol class="breadcrumb">
+  <li><a ng-href="#/"><i class="fa fa-home"></i></a></li>
+  <li class="active">{{category}}</li>
+</ol>
+
+
+		<div class="row addon-title">
+			<h2 class="col-sm-12 text-center">{{category}} Add-ons</h2>
+		</div>
+
+			<table class="table">
+				<tbody>
+					<tr ng-repeat="addon in addons">
+						<td>
+							<div class="thumb-container">
+								<img ng-src="{{addon.thumbnailUrl}}">
+							</div>
+						</td>
+						<td class="font-size-18">{{addon.title}}</td>
+						<td class="font-size-18" ng-click="openItem(addon.id, addon.title)">
+							<span class="fa fa-eye text-center"></span> 
+							<span>View Add-on</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	
+
+<span class="arrow-left fa fa-chevron-left fa-2x" ng-click="previousItem()"></span>
+<span class="arrow-right fa fa-chevron-right fa-2x" ng-click="nextItem()"></span>

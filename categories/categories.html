@@ -1,0 +1,14 @@
+<h1 class="text-center margin-top-50">Mediafly Add-ons</h1>
+
+<div class="row category-container">
+
+	<div class="col-sm-6 category" ng-repeat="category in categories" ng-click="openFolder(category.id, category.name)">
+
+		<img class="img-responsive center-block category-icon" ng-src="{{category.thumbnailUrl}}">
+		<div class="font-family font-size-24 margin-top-25 text-center">{{category.name}}</div>
+
+	</div>
+</div>
+
+<span class="arrow-left fa fa-chevron-left fa-2x" ng-click="previousItem()"></span>
+<span class="arrow-right fa fa-chevron-right fa-2x" ng-click="nextItem()"></span>
