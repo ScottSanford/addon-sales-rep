@@ -38,6 +38,11 @@ angular.module('intTemplatesApp').factory("mfly", function($q) {
                 });
 
             return deferred.promise;
+        }, 
+
+        openItem: function(id) {
+            var url = 'mfly://item/' + id;
+            return url;
         }
     }
 

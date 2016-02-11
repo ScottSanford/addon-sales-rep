@@ -11,7 +11,7 @@
 	<title>Interactive Templates</title>
 </head>
 <body>
-
+    <growl-notifications></growl-notifications>
     <div class="header">
         <a href="#menu"><span class="fa fa-bars fa-2x" id="hamburger-menu"></span></a>
     </div>
@@ -44,7 +44,8 @@
     </nav>
 
 
-    <div ng-view></div>
+    <div ng-view>
+    </div>
 
     <script src="lib/angular/angular.js"></script>
 	  <script src="lib/jquery/dist/jquery.js"></script>
@@ -52,6 +53,7 @@
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-growl-notifications/dist/angular-growl-notifications.js"></script>
 
     <script src="lib/mfly-commands/src/mflyCommands.js"></script>
     <script src="lib/standardized-menu/js/jquery.mmenu.min.js"></script>

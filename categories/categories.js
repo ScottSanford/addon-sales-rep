@@ -11,7 +11,6 @@ angular.module('intTemplatesApp')
 	    	$scope.openFolder = function(id, name) {
 	    		
 	    		var url = '/templates?id=' + id + '&name=' + name;
-                console.log(url);
 	    		
 	    		$location.url(url);
 	    	}

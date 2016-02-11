@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .table tbody td:nth-child(2) {
-	width:60%;
+	width:40%;
 }
 
 .table > tbody > tr > td {
@@ -210,6 +210,44 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-control.right, .carousel-control.left {
 	background-image: none;
+}
+
+growl-notifications {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 1000;
+}
+
+growl-notifications growl-notification {
+    display: block;
+    width: 400px;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #e9e9e9;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    border-left-width: 5px;
+    border-left-color: #92C423;
+}
+
+growl-notification.fading.ng-move{
+    opacity: 0;
+    -webkit-transition: 1s linear all; /* Safari/Chrome */
+    transition: 1s linear all; /* All other modern browsers and IE10+ */
+}
+
+growl-notification.fading.ng-move.ng-move-active {
+    opacity: 1;
+}
+growl-notification.fading.ng-leave {
+    opacity: 1;
+    -webkit-transition: 1s linear all; /* Safari/Chrome */
+    transition: 1s linear all; /* All other modern browsers and IE10+ */
+}
+
+growl-notification.fading.ng-leave.ng-leave-active {
+    opacity: 0;
 }
 
 /*===================================================================================

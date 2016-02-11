@@ -13,7 +13,7 @@
 			<div class="col-sm-2"></div>
 			<div class="col-sm-8 carousel-container">
 				<uib-carousel ng-show="images">
-			      <uib-slide ng-repeat="slide in slides">
+			      <uib-slide ng-repeat="slide in slides" ng-if="$index > 0">
 			        <img ng-src="{{slide.thumbnailUrl}}" style="margin:auto;">
 			      </uib-slide>
 			    </uib-carousel>

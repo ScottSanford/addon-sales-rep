@@ -18,13 +18,19 @@
 						</td>
 						<td class="font-size-18">{{addon.title}}</td>
 						<td class="font-size-18" ng-click="openItem(addon.id, addon.title)">
-							<span class="fa fa-eye text-center"></span> 
-							<span>View Add-on</span>
+							<span class="fa fa-camera text-center"></span> 
+							<span>Screenshots</span>
+						</td>						
+						<td class="font-size-18" ng-click="openAddon(addon.id)">
+							<span class="fa fa-external-link text-center"></span> 
+							<span>Play</span>
 						</td>
 					</tr>
 				</tbody>
 			</table>
-	
-
+			
+<growl-notification class="fading" ttl="5000" ng-if="noAddon">
+	Sorry, this Add-on is not available.
+</growl-notification>
 <span class="arrow-left fa fa-chevron-left fa-2x" ng-click="previousItem()"></span>
 <span class="arrow-right fa fa-chevron-right fa-2x" ng-click="nextItem()"></span>

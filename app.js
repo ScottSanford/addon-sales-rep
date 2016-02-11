@@ -1,7 +1,8 @@
 angular.module("intTemplatesApp", [
         'ngRoute', 
         'ui.bootstrap',
-        'ngAnimate'
+        'ngAnimate', 
+        'growlNotifications'
         ])
 
         .config(function ($routeProvider, $compileProvider) { 

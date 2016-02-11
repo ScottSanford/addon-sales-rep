@@ -17,6 +17,23 @@ angular.module('intTemplatesApp')
 		$location.url('/item?itemId=' + id + '&categoryId=' + categoryId + '&categoryName=' + categoryName + '&name=' + addonName);
 	};
 
+	$scope.openAddon = function(id) {
+		$scope.noAddon = false;
+		mfly.getFolder(id).then(function(data){
+			if (data[0].type === 'zip') {
+
+				var firstItem = data[0].id;
+				mflyCommands.openItem(firstItem);	
+
+
+			} else {
+				$scope.noAddon = true;
+			}
+
+
+		})
+	};
+
 
     $scope.previousItem = function() {
         mflyCommands.previous();
